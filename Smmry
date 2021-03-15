@@ -1,0 +1,7 @@
+$ch = curl_init("https://api.smmry.com/&SM_API_KEY=X&SM_URL=http://example.com");
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT,20);
+curl_setopt($ch, CURLOPT_TIMEOUT,20);
+$return = json_decode(curl_exec($ch), true);
+curl_close($ch);
